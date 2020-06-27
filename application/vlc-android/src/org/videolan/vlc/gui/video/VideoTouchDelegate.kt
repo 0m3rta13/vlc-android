@@ -233,8 +233,8 @@ class VideoTouchDelegate(private val player: VideoPlayerActivity,
                             } else {
                                 val range = (if (screenConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) screenConfig.xRange else screenConfig.yRange).toFloat()
                                 when {
-                                    event.x < range / 4f -> seekDelta(-10000)
-                                    event.x > range * 0.75 -> seekDelta(10000)
+                                    event.x < range / 4f -> seekDelta(-5000)
+                                    event.x > range * 0.75 -> seekDelta(5000)
                                     else -> player.doPlayPause()
                                 }
                             }
